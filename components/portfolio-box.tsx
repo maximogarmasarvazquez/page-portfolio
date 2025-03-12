@@ -26,11 +26,11 @@ const { title, image, urlGithub, urlDemo } = data;
          <div className='flex gap-5 mt-5'>
             <Link href={urlGithub} target='_blank'
             className="p-2 transition duration-150 rounded-lg bg-slate-500 hover:bg-slate-500/80" >
-                GitHub
+                GitHub 
             </Link>
             <Link href={urlDemo} target='_blank'
             className="p-2 transition duration-150 rounded-lg bg-secondary hover:bg-secondary" >
-                GitHub
+                GitHub Page
             </Link>
          </div>
         </div>

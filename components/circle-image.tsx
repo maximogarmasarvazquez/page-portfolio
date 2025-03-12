@@ -6,7 +6,7 @@ const CircleImage = () => {
     return (
         <div className='bottom-0 right-0 hidden md:inline-block md:absolute'>
             <Image 
-                src='/images/megafono.png' 
+                src='/images/azul (1).png' 
                 width={300} 
                 height={300} 
                 alt='megafono'
