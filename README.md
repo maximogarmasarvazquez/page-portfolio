@@ -1,9 +1,8 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 # Portafolio
 
 ## Descripción 🏝
 
-Este es mi portafolio creado con HTML/CSS/JS.
+Este es mi portafolio creado con NextJS y Tailwind CSS
 
 ## Autor ✒️
 **Maximo Garmasar Vazquez**
