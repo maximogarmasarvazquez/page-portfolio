@@ -5,12 +5,13 @@ import React from 'react';
 import Link from 'next/link';
 import TechsFront from '@/components/techsFront';
 import TechsBack from '@/components/techsBack';
+import AvatarServices from '@/components/avatar-services';
 const ServicesPage = () => {
     return (
         <>
             <TransitionPage/>
-           
-            <div className='mt-20 p-5 grid items-center justify-center md:h-[500px] max-w-5xl
+           <AvatarServices/>
+            <div className='mt-10 p-5 grid items-center justify-center md:h-[500px] max-w-5xl
             gap-6 mx-auto md:grid-cols-2'>
                 <div className='max-w-[450px] mt-20 md:mt-10'>
                     <h1 className='text-2xl leading-tight 

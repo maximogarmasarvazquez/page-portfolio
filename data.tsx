@@ -1,7 +1,7 @@
 import { BookText, CodeSquare, HomeIcon, UserRound, Linkedin,  Crop, Pencil, Computer, Book, Brain, Speech, Github } from "lucide-react";
-import { FaCss3Alt, FaHtml5, FaJs, FaNode, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaHtml5, FaJava, FaJs, FaNode, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-
+import { DiPostgresql } from "react-icons/di";
 import { SiSqlite } from "react-icons/si";
 
 
@@ -62,7 +62,7 @@ export const dataAboutPage = [
     },
     {
         id: 2,
-        title: "Diplomatura en introducción a la porgramacion en Java",
+        title: "Diplomatura en introducción a la programacion en Java",
         subtitle: "UTN Facultad Regional Villa Maria",
         description: "En la diplomatura en introduccion a la programcion en Java di mis primeros pasos en la programacion, algunos de los temas mas importantes fueron, pensamiento logico, desarrollo de algoritmos, variables, estructuras  de control, programacion orientada a objetos, metodos, clases, metodologias agiles, entre otros. ",
         date: "2021 - 2022",
@@ -160,13 +160,17 @@ export const dataPortfolio = [
         urlGithub: "https://github.com/maximogarmasarvazquez/App-Api-Clima",
        
     },
+    {
+        id: 5,
+        title: "Mi Portfolio",
+        image: "/images/p5.png",
+         urlDemo: "https://page-portfolio-maxivaz.netlify.app/",
+        urlGithub: "https://github.com/maximogarmasarvazquez/page-portfolio",
+       
+    },
 ];
 
-export const techsDataFront = [
-    {
-        icon: <FaJs />,
-        title: "JavaScript",
-    },
+export const techsDataBack = [
     {
         icon: <SiSqlite />,
         title: "SQLite",
@@ -179,14 +183,21 @@ export const techsDataFront = [
         icon: <FaReact />,
         title: "ReactJs",
     },
-  
+    {
+        icon: <FaJava />,
+        title: "Java",
+    },
+    {
+        icon: <DiPostgresql />,
+        title: "PostgreSQL",
+    },
 
 ];
 
 
 
 
-export const techsDataBack = [
+export const techsDataFront = [
     {
         icon: <FaJs />,
         title: "JavaScript",
@@ -202,6 +213,10 @@ export const techsDataBack = [
     {
         icon: <RiTailwindCssFill />,
         title: "TailwindCss",
+    },
+    {
+        icon: <FaReact />,
+        title: "ReactJs",
     },
     
     

@@ -7,7 +7,7 @@ const TimeLine = () => {
                 <div className="-my-6">
                     {dataAboutPage.map((data) => (
                         <div key={data.id} className="relative py-6 pl-8 sm:pl-32 group">
-                            <h3 className="mb-1 text-2xl font-bold sm:mb-0">{data.title}</h3>
+                            <h3 className="mb-1 text-2xl sm:mt-1 font-bold sm:mb-1">{data.title}</h3>
                             <div className="flex flex-col sm:flex-row items-start mb-1 
                                         group-last:before:hidden before:absolute 
                                         before:left-2 sm:before:left-0 before:h-full

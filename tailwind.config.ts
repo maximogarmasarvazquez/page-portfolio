@@ -6,8 +6,11 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+  theme: {     
     extend: {
+      screens: {
+        sm: "140px",
+      },
       colors: {
         primary: "#47637f", // Color principal
         secondary: "#38a0ca", // Color secundario
@@ -22,6 +25,7 @@ export default {
           " linear-gradient(90deg, rgba(52,122,163,1) 10%, rgba(39,106,145,1) 23%, rgba(36,95,126,1) 40%, rgba(33,89,121,1) 59%, rgba(47,101,133,1) 76%, rgba(48,96,122,1) 89%);",
       },
     },
+  
   },
   plugins: [],
 } satisfies Config;

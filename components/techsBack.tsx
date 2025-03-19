@@ -15,7 +15,7 @@ const TechsBack = () => {
             </div>
     
             {/* Título */}
-            <h3 className="mb-3 text-lg text-white text-center">Back-end</h3>
+            <h3 className="mb-3 text-lg text-white text-center">Back-End</h3>
     
             {/* Slider de Tecnologías */}
             <div className="w-full overflow-hidden">
