@@ -142,8 +142,8 @@ export const dataPortfolio = [
         id: 2,
         title: "Ecommerce",
         image: "/images/p2.png",
-        urlDemo: "https://maximogarmasarvazquez.github.io/Pokemon-Api-Page/",
-        urlGithub: "https://maximogarmasarvazquez.github.io/CarritoDeCompras/",
+        urlDemo: "https://maximogarmasarvazquez.github.io/CarritoDeCompras/",
+        urlGithub: "https://github.com/maximogarmasarvazquez/CarritoDeCompras",
        
     },   {
         id: 3,
