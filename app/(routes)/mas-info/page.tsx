@@ -69,6 +69,7 @@ const MasInfo = () => {
           Enviarme un correo
         </a>
 
+
         {/* Tecnologías utilizadas */}
         <div className="text-center">
           <p className="text-lg text-gray-700 dark:text-gray-300">

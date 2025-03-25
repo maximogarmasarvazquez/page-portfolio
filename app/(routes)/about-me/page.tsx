@@ -3,6 +3,7 @@ import ContainerPage from '@/components/container';
 import TimeLine from '@/components/time-line';
 import TransitionPage from '@/components/transition-page';
 import React from 'react';
+import BotonCv from '@/components/boton-cv';
 
 const PageAboutMe = () => {
     return (
@@ -17,6 +18,10 @@ const PageAboutMe = () => {
                    
                 </h1>
                     <TimeLine/>
+                    <div className='flex justify-center '>
+                            <BotonCv/>
+                    </div>
+                  
             </ContainerPage>
         </>
     );

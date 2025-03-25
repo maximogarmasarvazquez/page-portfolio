@@ -24,6 +24,7 @@ const TimeLine = () => {
                             <div className="text-slate-400 ">{data.description}</div>
                         </div>
                     ))}
+                    
                 </div>
             </div>
         </div>
