@@ -132,9 +132,9 @@ export const serviceData = [
 export const dataPortfolio = [
     {
         id: 1,
-        title: "Buscador de Pokemones",
-        image: "/images/p1.jpg",
-         urlDemo: "https://maximogarmasarvazquez.github.io/Pokemon-Api-Page/",
+        title: "PokeApiPage",
+        image: "/images/p1.png",
+         urlDemo: "https://pokemon-api-page.netlify.app/",
         urlGithub: "https://github.com/maximogarmasarvazquez/Pokemon-Api-Page",
        
     },
@@ -145,21 +145,23 @@ export const dataPortfolio = [
         urlDemo: "https://maximogarmasarvazquez.github.io/CarritoDeCompras/",
         urlGithub: "https://github.com/maximogarmasarvazquez/CarritoDeCompras",
        
-    },   {
+    },    
+   {
         id: 3,
-        title: "AlienCrush ",
-        image: "/images/p3.jpg",
-        urlDemo: "https://github.com/maximogarmasarvazquez/AlienCrush",
-        urlGithub: "https://github.com/maximogarmasarvazquez/AlienCrush",
-       
-    },   {
-        id: 4,
         title: "App del Clima",
         image: "/images/p4.png",
         urlDemo: "https://maximogarmasarvazquez.github.io/App-Api-Clima/",
         urlGithub: "https://github.com/maximogarmasarvazquez/App-Api-Clima",
        
     },
+    {
+        id: 4,
+        title: "AlienCrush ",
+        image: "/images/p3.jpg",
+        urlDemo: "https://github.com/maximogarmasarvazquez/AlienCrush",
+        urlGithub: "https://github.com/maximogarmasarvazquez/AlienCrush",
+       
+    },  
     {
         id: 5,
         title: "Mi Portfolio",
@@ -168,6 +170,7 @@ export const dataPortfolio = [
         urlGithub: "https://github.com/maximogarmasarvazquez/page-portfolio",
        
     },
+    
 ];
 
 export const techsDataBack = [
