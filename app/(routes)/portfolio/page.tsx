@@ -18,7 +18,7 @@ const PortfolioPage = () => {
                 </h1>
 
                 <div className='relative z-10 grid
-                 max-w-6xl gap-8 mx-auto mt-4 sm:grid-cols-1 md:grid-cols-3'>
+                  gap-8 mx-auto mt-4 sm:grid-cols-1 md:grid-cols-3'>
                  {dataPortfolio.map((data) => (
                     <PortfolioBox key={data.id} data={data}/>
                     ))}

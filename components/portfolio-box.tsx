@@ -17,23 +17,36 @@ const { data } = props;
 const { title, image, urlGithub, urlDemo } = data;
 
     return (
-        <div className=' p-4 border border-teal-50 rounded-xl'>
-           <h3 className='mb-4 text-xl '>
-           {title}
-           </h3>
-           <Image src={image} width={200} height={200} alt="image product"
-           className=' max-w-[270px] sm:w-[300px] w-full  md:max-w-[280px]  rounded-2xl h-auto'/>
-         <div className='flex gap-5 mt-5'>
-            <Link href={urlGithub} target='_blank'
-            className="p-2 transition duration-150 rounded-lg  bg-slate-500 hover:bg-slate-500/80" >
-                GitHub 
-            </Link>
-            <Link href={urlDemo} target='_blank'
-            className="p-2 transition duration-150 rounded-lg  bg-secondary hover:bg-secondary" >
-                GitHub Page
-            </Link>
-         </div>
-        </div>
+<div className="w-[300px] p-4 border border-teal-50 rounded-xl flex flex-col items-center">
+  <h3 className="mb-4 text-xl text-center">{title}</h3>
+  <div className="w-full h-[180px] flex items-center justify-center overflow-hidden">
+    <Image
+      src={image}
+      alt="image product"
+      width={0}
+      height={0}
+      sizes="100vw"
+      className="h-full w-auto object-contain rounded-2xl"
+    />
+  </div>
+  <div className="flex gap-3 justify-center mt-5">
+    <Link
+      href={urlGithub}
+      target="_blank"
+      className="p-2 transition duration-150 rounded-lg bg-slate-500 hover:bg-slate-500/80"
+    >
+      GitHub
+    </Link>
+    <Link
+      href={urlDemo}
+      target="_blank"
+      className="p-2 transition duration-150 rounded-lg bg-secondary hover:bg-secondary/80"
+    >
+      GitHub Page
+    </Link>
+  </div>
+</div>
+
     );
 }
 
