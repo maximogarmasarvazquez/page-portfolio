@@ -1,17 +1,21 @@
 import React from 'react'
 
-function botonCv() {
+function BotonCv() {
   return (
     <div>
-        {/* Botón descargar cv */}
-        <a href="/images/MaximoGarmasarCVDeveloper.pdf"
-                                    download="MaximoGarmasarCVDeveloper.pdf"
-                                    className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
-                                    target="_blank" rel="noopener noreferrer">
-                                    Descargar mi CV
-        </a>
+      <a
+        href="/images/MaximoGarmasarCVDeveloper.pdf"
+        download="MaximoGarmasarCV2026.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 rounded-xl border border-secondary text-secondary 
+        hover:bg-secondary hover:text-black transition-all duration-300 
+        shadow-md hover:shadow-secondary/40 hover:scale-105"
+      >
+        Descargar CV
+      </a>
     </div>
   )
 }
 
-export default botonCv
+export default BotonCv

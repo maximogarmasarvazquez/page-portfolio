@@ -1,4 +1,3 @@
-import Avatar from '@/components/avatar';
 import ContainerPage from '@/components/container';
 import TimeLine from '@/components/time-line';
 import TransitionPage from '@/components/transition-page';
@@ -8,20 +7,29 @@ import BotonCv from '@/components/boton-cv';
 const PageAboutMe = () => {
     return (
         <>
-            <TransitionPage/>
+            <TransitionPage />
+
             <ContainerPage>
-                <Avatar/>
-                <h1 className='text-2xl leading-tight text-center
-                 md:text-left md:text-4xl md:mt-10 md:ml-20'>
-                    Toda mi {''}
-                    <span className='font-bold text-secondary'> formacion profesional</span>
-                   
-                </h1>
-                    <TimeLine/>
-                    <div className='flex justify-center '>
-                            <BotonCv/>
+
+                <div className="max-w-4xl mx-auto text-center md:text-left">
+                    
+                    <h1 className='text-3xl md:text-5xl font-bold leading-tight mt-10 mb-6'>
+                        Mi <span className='text-secondary'>trayectoria profesional</span>
+                    </h1>
+
+                    <p className="text-gray-300 text-base md:text-lg mb-12 leading-relaxed">
+                        Soy desarrollador full stack enfocado en construir aplicaciones modernas,
+                        escalables y bien diseñadas. A lo largo de mi experiencia trabajé con
+                        distintas tecnologías creando soluciones reales orientadas a usuarios.
+                    </p>
+
+                    <TimeLine />
+
+                    <div className='flex justify-center mt-16'>
+                        <BotonCv />
                     </div>
-                  
+
+                </div>
             </ContainerPage>
         </>
     );

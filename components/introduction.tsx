@@ -1,64 +1,62 @@
-"use client";  // Debe ir en la primera línea
+"use client";
 
 import React from 'react'
-import Image from 'next/image'
 import { TypeAnimation } from 'react-type-animation'
 import Link from 'next/link'
 
-// Componente
 const Introduction = () => {
   return (
-    <div className='z-20 w-full bg-darkBg/60 '>
-      <div className='z-20 grid items-center h-full p-6 py-20 md:py-0 md:grid-cols-2'>
+    <div className='w-full min-h-screen flex items-center justify-center bg-darkBg px-6'>
+      
+      <div className='max-w-4xl text-center md:text-left'>
 
-        {/* Contenedor centrado */}
-        <div className='flex justify-center'>
-          <Image 
-            src="/images/maquinaDeEscribir.png" 
-            className="m-8 mx-auto " 
-            priority 
-            width={400} 
-            height={400} 
-            alt="Profile pic" 
+        {/* Título principal */}
+        <h1 className='text-3xl md:text-5xl font-bold leading-tight mb-6'>
+          Hola, soy <span className='text-secondary'>Maximo</span> 💻
+          <br />
+          Full Stack Developer
+        </h1>
+
+        {/* Animación más sutil */}
+        <h2 className='text-lg md:text-2xl text-white-400 mb-6'>
+          <TypeAnimation
+            sequence={[
+              'Construyo aplicaciones web modernas.',
+              2000,
+              'Desarrollo experiencias escalables.',
+              2000,
+              'Trabajo con React, Node, SQL y mas.',
+              2000,
+            ]}
+            repeat={Infinity}
+            speed={50}
           />
+        </h2>
+
+        {/* Descripción */}
+        <p className='text-base md:text-lg text-gray-300 mb-10 max-w-2xl leading-relaxed'>
+          Desarrollo aplicaciones web <span className='text-white'>modernas y escalables</span>, 
+          combinando diseño y tecnología para crear 
+          <span className='text-secondary'> experiencias de usuario de alto nivel</span>.
+        </p>
+
+        {/* Botones */}
+        <div className='flex flex-col md:flex-row gap-4 justify-center md:justify-start'>
+          <Link
+            href='/portfolio'
+            className='px-6 py-3 rounded-xl border border-white/20 hover:bg-white hover:text-black transition-all'
+          >
+            Ver proyectos
+          </Link>
+
+          <Link
+            href='/mas-info'
+            className='px-6 py-3 rounded-xl border border-secondary text-secondary hover:bg-secondary hover:text-black transition-all'
+          >
+            Contacto
+          </Link>
         </div>
 
-        <div className='flex flex-col justify-center max-w-md'>
-          <h1 className='mb-5 text-2xl leading-tight text-center md:text-left md:text-4xl md:mb-10 '>
-            Si puedes pensarlo,
-            <TypeAnimation
-              sequence={[
-                ' puedes construirlo.',
-                1000,
-                ' puedes diseñarlo.',
-                1000,
-                ' puedes programarlo.',
-                1000,
-                ' puedes hacerlo.',
-                1000
-              ]}
-              repeat={Infinity}
-              wrapper='span'
-              speed={50}
-              className='font-bold text-secondary'
-            />
-          </h1>
-          <p className='mx-auto mb-2 text-xl md:mx-0 md:mb-8'>
-            Como desarrollador front-end, me dedico a combinar diseños y tecnologías para crear experiencias de usuario atractivas y funcionales.
-          </p>
-
-          <div className='mb-20 flex items-center justify-center gap-3 md:justify-start md:gap-10'>
-            <Link href='/portfolio' className='px-3 py-2 transition-all border-2 cursor-pointer text-md 
-            w-fit rounded-xl hover:shadow-xl hover:shadow-white/50'>
-              Ver proyectos
-            </Link>
-        
-            <Link href='/mas-info' className='px-3 py-2 transition-all border-2 cursor-pointer text-md 
-            w-fit rounded-xl hover:shadow-xl text-tercero border-tercero hover:shadow-tercero'>
-              Contacta conmigo
-            </Link>
-          </div>
-        </div>
       </div>
     </div>
   )

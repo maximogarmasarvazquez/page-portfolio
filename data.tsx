@@ -53,21 +53,36 @@ export const itemsNavbar = [
 ];
 
 export const dataAboutPage = [
-    {
-        id: 1,
-        title: "Técnico superior en desarrollo web y aplicaciones digitales",
-        subtitle: "Instituto Superior Santa Rosa de Calamuchita",
-        description: "El tecnico Superior en Desarrollo Web y Aplicaciones Digitales, es un profesional que desarrolla aplicaciones distribuidas en red que se ejecutan desde un servidor a un navegador web. Genera proyectos propios tomando decisiones personales o en grupo, para generar un modelo productivo más innovador,       competitivo e internacionalizado.",
-        date: "2022 - 2024 ",
-    },
-    {
-        id: 2,
-        title: "Diplomatura en introducción a la programacion en Java",
-        subtitle: "UTN Facultad Regional Villa Maria",
-        description: "En la diplomatura en introduccion a la programcion en Java di mis primeros pasos en la programacion, algunos de los temas mas importantes fueron, pensamiento logico, desarrollo de algoritmos, variables, estructuras  de control, programacion orientada a objetos, metodos, clases, metodologias agiles, entre otros. ",
-        date: "2021 - 2022",
-    },
-  
+{
+    id: 1,
+    title: "Técnico Superior en Desarrollo Web y Aplicaciones Digitales",
+    subtitle: "Instituto Superior Santa Rosa de Calamuchita",
+    description: "Formación orientada al desarrollo de aplicaciones web modernas y distribuidas, abarcando tanto frontend como backend. Durante la carrera desarrollé proyectos individuales y grupales, aplicando buenas prácticas, trabajo en equipo y metodologías ágiles para crear soluciones digitales eficientes.",
+    date: "2022 - 2024",
+    tecnologias: "JavaScript • React • Node.js • SQL • SQLite • Tailwind CSS • GitHub • C#",
+    type: "education"
+},
+{
+    id: 2,
+    title: "Diplomatura en Introducción a la Programación en Java",
+    subtitle: "UTN Facultad Regional Villa María",
+    description: "Primer acercamiento a la programación, enfocado en el desarrollo del pensamiento lógico y la resolución de problemas. Se trabajaron conceptos fundamentales como algoritmos, estructuras de control y programación orientada a objetos.",
+    date: "2021 - 2022",
+    tecnologias: "Java (POO) • HTML • CSS",
+    type: "education"
+},
+{
+  id: 3,
+  type: "experience",
+  title: "Desarrollador Full Stack Freelance",
+  subtitle: "Proyecto para cooperativa eléctrica (geolocalización de infraestructura)",
+  date: "Jul 2025 - Sep 2025",
+  highlight: true,
+  description: "Desarrollé de forma independiente una aplicación web para la visualización de nodos eléctricos sobre mapas interactivos, trabajando con un miembro del área de sistemas de una cooperativa. Integré una base de datos SQL existente y diseñé una API REST con Node.js y Express para la gestión de postes, subestaciones, consumos y servicios. Implementé geolocalización y renderizado de datos mediante Leaflet y OpenStreetMap, permitiendo visualizar nodos a partir de coordenadas geográficas. En el frontend, desarrollé una interfaz en React con funcionalidades de filtrado y visualización dinámica, consumiendo la API mediante fetch y procesando datos en formato JSON. El proyecto fue desarrollado en entorno local y entregado para uso interno de la organización.",
+  tecnologias: "React • JavaScript • Node.js • Express • SQL • Leaflet • OpenStreetMap • CSS"
+}
+
+    
 ]
 
 export const dataCounter = [
@@ -128,49 +143,72 @@ export const serviceData = [
         description: "Creación y administración de contenido para mejorar la interacción con la audiencia, ", 
     },
 ];
-
 export const dataPortfolio = [
-    {
-        id: 1,
-        title: "PokeApiPage",
-        image: "/images/p1.png",
-         urlDemo: "https://pokemon-api-page.netlify.app/",
-        urlGithub: "https://github.com/maximogarmasarvazquez/Pokemon-Api-Page",
-       
-    },
-    {
-        id: 2,
-        title: "Ecommerce",
-        image: "/images/p2.png",
-        urlDemo: "https://maximogarmasarvazquez.github.io/CarritoDeCompras/",
-        urlGithub: "https://github.com/maximogarmasarvazquez/CarritoDeCompras",
-       
-    },    
-   {
-        id: 3,
-        title: "App del Clima",
-        image: "/images/p4.png",
-        urlDemo: "https://maximogarmasarvazquez.github.io/App-Api-Clima/",
-        urlGithub: "https://github.com/maximogarmasarvazquez/App-Api-Clima",
-       
-    },
-    {
-        id: 4,
-        title: "AlienCrush ",
-        image: "/images/p3.jpg",
-        urlDemo: "https://github.com/maximogarmasarvazquez/AlienCrush",
-        urlGithub: "https://github.com/maximogarmasarvazquez/AlienCrush",
-       
-    },  
-    {
-        id: 5,
-        title: "Mi Portfolio",
-        image: "/images/p5.png",
-         urlDemo: "https://page-portfolio-maxivaz.netlify.app/",
-        urlGithub: "https://github.com/maximogarmasarvazquez/page-portfolio",
-       
-    },
-    
+{
+  id: 1,
+  title: "Sistema de Geolocalización de Infraestructura Eléctrica",
+  image: "/images/p6.png",
+  urlDemo: "",
+  urlGithub: "",
+  description:
+    "Aplicación web desarrollada para una cooperativa eléctrica que permite visualizar y gestionar nodos eléctricos en mapas interactivos.",
+  tech: ["React", "Node.js", "Express", "SQL", "Leaflet", "OpenStreetMap"],
+  type: "work",
+  details: [
+    "Desarrollo completo de una aplicación web para visualización de infraestructura eléctrica.",
+    "Diseño e implementación de una API REST para gestionar postes, subestaciones, consumos y servicios.",
+    "Integración con base de datos SQL existente de la cooperativa.",
+    "Implementación de geolocalización y renderizado de nodos en mapas interactivos.",
+    "Desarrollo de interfaz en React con filtros dinámicos y visualización por tipo de nodo.",
+    "Consumo y procesamiento de datos en formato JSON desde el frontend.",
+    "Proyecto entregado para uso interno en entorno productivo.",
+  ],
+},
+
+  {
+    id: 2,
+    title: "PokeApi App",
+    image: "/images/p1.png",
+    urlDemo: "https://pokemon-api-page.netlify.app/",
+    urlGithub: "https://github.com/maximogarmasarvazquez/Pokemon-Api-Page",
+    description:
+      "Aplicación que consume la API de Pokémon permitiendo buscar, visualizar y comparar Pokémon.",
+    tech: ["React", "API REST", "CSS"],
+    type: "personal",
+  },
+  {
+    id: 3,
+    title: "Ecommerce",
+    image: "/images/p2.png",
+    urlDemo: "https://maximogarmasarvazquez.github.io/CarritoDeCompras/",
+    urlGithub: "https://github.com/maximogarmasarvazquez/CarritoDeCompras",
+    description:
+      "Simulación de tienda online con carrito de compras y gestión de productos.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    type: "personal",
+  },
+  {
+    id: 4,
+    title: "App del Clima",
+    image: "/images/p4.png",
+    urlDemo: "https://maximogarmasarvazquez.github.io/App-Api-Clima/",
+    urlGithub: "https://github.com/maximogarmasarvazquez/App-Api-Clima",
+    description:
+      "Aplicación que muestra el clima en tiempo real mediante consumo de API externa.",
+    tech: ["JavaScript", "API REST"],
+    type: "personal",
+  },
+  {
+    id: 5,
+    title: "AlienCrush",
+    image: "/images/p3.jpg",
+    urlDemo: "https://github.com/maximogarmasarvazquez/AlienCrush?tab=readme-ov-file",
+    urlGithub: "https://github.com/maximogarmasarvazquez/AlienCrush",
+    description:
+      "Videojuego móvil estilo match-3 desarrollado en Unity con C#.",
+    tech: ["Unity", "C#"],
+    type: "personal",
+  },
 ];
 
 export const techsDataBack = [
