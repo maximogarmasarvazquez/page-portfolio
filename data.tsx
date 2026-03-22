@@ -76,7 +76,7 @@ export const dataAboutPage = [
   type: "experience",
   title: "Desarrollador Full Stack Freelance",
   subtitle: "Proyecto para cooperativa eléctrica (geolocalización de infraestructura)",
-  date: "Jul 2025 - Sep 2025",
+  date: "Jul 2025",
   highlight: true,
   description: "Desarrollé de forma independiente una aplicación web para la visualización de nodos eléctricos sobre mapas interactivos, trabajando con un miembro del área de sistemas de una cooperativa. Integré una base de datos SQL existente y diseñé una API REST con Node.js y Express para la gestión de postes, subestaciones, consumos y servicios. Implementé geolocalización y renderizado de datos mediante Leaflet y OpenStreetMap, permitiendo visualizar nodos a partir de coordenadas geográficas. En el frontend, desarrollé una interfaz en React con funcionalidades de filtrado y visualización dinámica, consumiendo la API mediante fetch y procesando datos en formato JSON. El proyecto fue desarrollado en entorno local y entregado para uso interno de la organización.",
   tecnologias: "React • JavaScript • Node.js • Express • SQL • Leaflet • OpenStreetMap • CSS"

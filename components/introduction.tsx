@@ -11,7 +11,7 @@ const Introduction = () => {
       <div className='max-w-4xl text-center md:text-left'>
 
         {/* Título principal */}
-        <h1 className='text-3xl md:text-5xl font-bold leading-tight mb-6'>
+        <h1 className='text-3xl md:text-5xl  font-bold leading-tight mt-5 mb-6'>
           Hola, soy <span className='text-secondary'>Maximo</span> 💻
           <br />
           Full Stack Developer
