@@ -26,11 +26,12 @@ type PortfolioItem =
       description: string;
       tech: string[];
       type: "work";
-      details: string[]; // 👈 obligatorio SOLO acá
+      details: string[];
     };
 
 const PortfolioPage = () => {
-  const workProject = dataPortfolio.find(
+  // ✅ ahora trae TODOS los trabajos
+  const workProjects = dataPortfolio.filter(
     (p): p is Extract<PortfolioItem, { type: "work" }> =>
       p.type === "work"
   );
@@ -48,16 +49,25 @@ const PortfolioPage = () => {
 
         {/* EXPERIENCIA */}
         <h1 className="text-2xl md:text-4xl text-center mb-8">
-          Experiencia <span className="text-secondary font-bold">Profesional</span>
+          Experiencia{" "}
+          <span className="text-secondary font-bold">
+            Profesional
+          </span>
         </h1>
 
-        {workProject && (
-          <WorkExperience data={workProject} />
-        )}
+        {/* ✅ MAP de experiencias */}
+        <div className="flex flex-col gap-8 max-w-5xl mx-auto">
+          {workProjects.map((project) => (
+            <WorkExperience key={project.id} data={project} />
+          ))}
+        </div>
 
         {/* PROYECTOS */}
         <h1 className="text-2xl md:text-4xl text-center mt-16 mb-8">
-          Proyectos <span className="text-secondary font-bold">Academicos</span>
+          Proyectos{" "}
+          <span className="text-secondary font-bold">
+            Académicos
+          </span>
         </h1>
 
         <div className="grid gap-8 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

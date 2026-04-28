@@ -164,6 +164,28 @@ export const dataPortfolio = [
     "Proyecto entregado para uso interno en entorno productivo.",
   ],
 },
+{
+  id: 2,
+  title: "Landing Web Cabañas Siempre Verde",
+  image: "/images/p7.png",
+  urlDemo: "https://complejo-web.vercel.app/",
+  urlGithub: "",
+  description:
+    "Landing page moderna y responsiva para un complejo de cabañas en Villa Ciudad Parque, enfocada en conversión mediante WhatsApp y experiencia visual atractiva.",
+  tech: ["Next.js", "React", "TailwindCSS", "Vercel", "Responsive Design"],
+  type: "work",
+  details: [
+    "Desarrollo de una landing page optimizada para conversión con acceso directo a reservas vía WhatsApp.",
+    "Implementación de diseño responsive adaptado a mobile, tablet y desktop.",
+    "Optimización de imágenes con Next.js Image (sizes, priority, lazy loading).",
+    "Creación de componentes reutilizables como cards de alojamientos y secciones dinámicas.",
+    "Integración de mapas embebidos para mostrar la ubicación del complejo.",
+    "Sección de testimonios con diseño visual atractivo y enfoque en confianza del usuario.",
+    "Animaciones suaves (fade + slide) para mejorar la experiencia de usuario.",
+    "Deploy en Vercel con dominio listo para producción.",
+  ],
+}
+,
 
   {
     id: 2,
