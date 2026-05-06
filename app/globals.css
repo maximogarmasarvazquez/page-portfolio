@@ -2,24 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌑 BASE GLOBAL */
 html, body {
-  color: #fff;
-  background-color:#24455f
+  color: #e5e7eb; /* gris claro */
+  background-color: #0b0b0b; /* 🔥 negro pro */
 }
 
+/* 🌫️ MAIN BACKGROUND */
+main {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03), transparent 40%),
+    #0b0b0b;
+}
+
+/* 🔵 SWIPER */
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #2482e0;
+  background-color: #ffffff;
+  opacity: 0.3;
 }
 
-main {
-  background: #24455f;
-  height: 100vh;
-  height: 100dvh;
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #ffffff;
 }
 
-@layer utilities{
+/* 🧠 UTIL */
+@layer utilities {
   .text-balance {
     text-wrap: balance;
   }

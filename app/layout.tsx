@@ -1,36 +1,36 @@
 import type { Metadata } from "next";
-import {  Urbanist } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
-
-
-// import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-
 
 import Navbar from "@/components/navbar";
 import Header from "@/components/header";
 
 const urbanist = Urbanist({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-urbanist",
 });
 
 export const metadata: Metadata = {
-  title: "maxivazDEV landing page 💻",
-  description: "Landing page made by maxivazDEV",
+  title: "Maximo Vazquez | Full Stack Developer",
+  description:
+    "Portfolio de Maximo Vazquez, desarrollador full stack especializado en React, Node.js y aplicaciones web modernas.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
-        className={`${urbanist.variable} ${urbanist.variable} antialiased`}
+        className={`
+          ${urbanist.variable}
+          font-sans
+          antialiased
+          bg-[#0B0B0B]
+          text-white
+        `}
       >
         <Navbar />
         <Header />

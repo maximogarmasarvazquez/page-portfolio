@@ -144,51 +144,72 @@ export const serviceData = [
     },
 ];
 export const dataPortfolio = [
-{
-  id: 1,
-  title: "Sistema de Geolocalización de Infraestructura Eléctrica",
-  image: "/images/p6.png",
-  urlDemo: "",
-  urlGithub: "",
-  description:
-    "Aplicación web desarrollada para una cooperativa eléctrica que permite visualizar y gestionar nodos eléctricos en mapas interactivos.",
-  tech: ["React", "Node.js", "Express", "SQL", "Leaflet", "OpenStreetMap"],
-  type: "work",
-  details: [
-    "Desarrollo completo de una aplicación web para visualización de infraestructura eléctrica.",
-    "Diseño e implementación de una API REST para gestionar postes, subestaciones, consumos y servicios.",
-    "Integración con base de datos SQL existente de la cooperativa.",
-    "Implementación de geolocalización y renderizado de nodos en mapas interactivos.",
-    "Desarrollo de interfaz en React con filtros dinámicos y visualización por tipo de nodo.",
-    "Consumo y procesamiento de datos en formato JSON desde el frontend.",
-    "Proyecto entregado para uso interno en entorno productivo.",
-  ],
-},
-{
-  id: 2,
-  title: "Landing Web Cabañas Siempre Verde",
-  image: "/images/p7.png",
-  urlDemo: "https://complejo-web.vercel.app/",
-  urlGithub: "",
-  description:
-    "Landing page moderna y responsiva para un complejo de cabañas en Villa Ciudad Parque, enfocada en conversión mediante WhatsApp y experiencia visual atractiva.",
-  tech: ["Next.js", "React", "TailwindCSS", "Vercel", "Responsive Design"],
-  type: "work",
-  details: [
-    "Desarrollo de una landing page optimizada para conversión con acceso directo a reservas vía WhatsApp.",
-    "Implementación de diseño responsive adaptado a mobile, tablet y desktop.",
-    "Optimización de imágenes con Next.js Image (sizes, priority, lazy loading).",
-    "Creación de componentes reutilizables como cards de alojamientos y secciones dinámicas.",
-    "Integración de mapas embebidos para mostrar la ubicación del complejo.",
-    "Sección de testimonios con diseño visual atractivo y enfoque en confianza del usuario.",
-    "Animaciones suaves (fade + slide) para mejorar la experiencia de usuario.",
-    "Deploy en Vercel con dominio listo para producción.",
-  ],
-}
-,
+  // 🔥 PROYECTO DESTACADO (TU WEB)
+  {
+    id: 0,
+    title: "Maxivaz Web Studio",
+    image: "/images/p8.png", // 👉 agregá la imagen
+    urlDemo: "https://maxivaz-web-studio.vercel.app/",
+    urlGithub: "",
+    description:
+      "Landing page profesional orientada a la captación de clientes, combinando diseño moderno, alto rendimiento y experiencia de usuario optimizada.",
+    tech: ["Next.js", "React", "TailwindCSS", "UX/UI", "Vercel"],
+    type: "work",
+    details: [
+      "Diseño enfocado en conversión de usuarios a clientes.",
+      "Interfaz moderna con animaciones y microinteracciones.",
+      "Optimización de rendimiento y tiempos de carga.",
+      "Arquitectura escalable para futuros servicios digitales.",
+      "Deploy en producción con Vercel.",
+    ],
+  },
+
+  // 👇 TUS PROYECTOS EXISTENTES
+  {
+    id: 1,
+    title: "Sistema de Geolocalización de Infraestructura Eléctrica",
+    image: "/images/p6.png",
+    urlDemo: "",
+    urlGithub: "",
+    description:
+      "Aplicación web desarrollada para una cooperativa eléctrica que permite visualizar y gestionar nodos eléctricos en mapas interactivos.",
+    tech: ["React", "Node.js", "Express", "SQL", "Leaflet", "OpenStreetMap"],
+    type: "work",
+    details: [
+      "Desarrollo completo de una aplicación web para visualización de infraestructura eléctrica.",
+      "Diseño e implementación de una API REST para gestionar postes, subestaciones, consumos y servicios.",
+      "Integración con base de datos SQL existente de la cooperativa.",
+      "Implementación de geolocalización y renderizado de nodos en mapas interactivos.",
+      "Desarrollo de interfaz en React con filtros dinámicos y visualización por tipo de nodo.",
+      "Consumo y procesamiento de datos en formato JSON desde el frontend.",
+      "Proyecto entregado para uso interno en entorno productivo.",
+    ],
+  },
 
   {
     id: 2,
+    title: "Landing Web Cabañas Siempre Verde",
+    image: "/images/p7.png",
+    urlDemo: "https://complejo-web.vercel.app/",
+    urlGithub: "",
+    description:
+      "Landing page moderna y responsiva para un complejo de cabañas en Villa Ciudad Parque, enfocada en conversión mediante WhatsApp y experiencia visual atractiva.",
+    tech: ["Next.js", "React", "TailwindCSS", "Vercel", "Responsive Design"],
+    type: "work",
+    details: [
+      "Landing optimizada para conversión con WhatsApp.",
+      "Diseño responsive completo.",
+      "Optimización de imágenes con Next.js.",
+      "Componentes reutilizables.",
+      "Integración de mapas.",
+      "Animaciones suaves UX.",
+      "Deploy en Vercel.",
+    ],
+  },
+
+  // PERSONAL
+  {
+    id: 3,
     title: "PokeApi App",
     image: "/images/p1.png",
     urlDemo: "https://pokemon-api-page.netlify.app/",
@@ -199,7 +220,7 @@ export const dataPortfolio = [
     type: "personal",
   },
   {
-    id: 3,
+    id: 4,
     title: "Ecommerce",
     image: "/images/p2.png",
     urlDemo: "https://maximogarmasarvazquez.github.io/CarritoDeCompras/",
@@ -210,7 +231,7 @@ export const dataPortfolio = [
     type: "personal",
   },
   {
-    id: 4,
+    id: 5,
     title: "App del Clima",
     image: "/images/p4.png",
     urlDemo: "https://maximogarmasarvazquez.github.io/App-Api-Clima/",
@@ -221,7 +242,7 @@ export const dataPortfolio = [
     type: "personal",
   },
   {
-    id: 5,
+    id: 6,
     title: "AlienCrush",
     image: "/images/p3.jpg",
     urlDemo: "https://github.com/maximogarmasarvazquez/AlienCrush?tab=readme-ov-file",

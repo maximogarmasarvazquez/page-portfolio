@@ -6,98 +6,120 @@ import { motion } from "framer-motion";
 
 const TimeLine = () => {
 
-    const sortedData = [...dataAboutPage].sort((a, b) => {
-        const aHighlight = a.highlight ? 1 : 0;
-        const bHighlight = b.highlight ? 1 : 0;
-        return bHighlight - aHighlight;
-    });
+  const sortedData = [...dataAboutPage].sort((a, b) => {
+    const aHighlight = a.highlight ? 1 : 0;
+    const bHighlight = b.highlight ? 1 : 0;
+    return bHighlight - aHighlight;
+  });
 
-    return (
-        <div className="flex flex-col justify-center divide-y divide-white/10">
-            <div className="w-full max-w-3xl mx-auto md:pb-32 md:pt-10">
-                <div className="-my-6">
+  return (
+    <div className="flex flex-col justify-center">
+      <div className="w-full max-w-3xl mx-auto md:pb-20 md:pt-10">
 
-                    {sortedData.map((data, index) => {
+        <div className="relative">
 
-                        const Icon = data.type === "education" 
-                            ? GraduationCap 
-                            : Briefcase;
+          {/* 🔥 Línea vertical global */}
+          <div className="
+            absolute left-4 md:left-[6rem] top-0 bottom-0
+            w-px bg-white/20
+          " />
 
-                        return (
-                            <motion.div
-                                key={data.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                                className={`relative py-8 pl-8 sm:pl-32 group transition-all duration-300
-                                ${data.highlight ? "scale-[1.03]" : ""}
-                                `}
-                            >
+          {sortedData.map((data, index) => {
 
-                                {/* Badge destacado */}
-                                {data.highlight && (
-                                    <span className="absolute -top-2 right-0 text-xs px-3 py-1 
-                                    bg-secondary text-black rounded-full font-semibold">
-                                        Destacado
-                                    </span>
-                                )}
+            const Icon =
+              data.type === "education"
+                ? GraduationCap
+                : Briefcase;
 
-                                {/* Icono */}
-                                <div className="absolute left-0 sm:left-[5.5rem] top-8 
-                                    flex items-center justify-center w-10 h-10 
-                                    rounded-full bg-darkBg border border-white/10">
+            return (
+              <motion.div
+                key={data.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className={`
+                  relative py-10 pl-12 md:pl-40
+                  group
+                  ${data.highlight ? "scale-[1.02]" : ""}
+                `}
+              >
 
-                                    <Icon className="w-5 h-5 text-secondary" />
-                                </div>
+                {/* 🔥 BADGE */}
+                {data.highlight && (
+                  <span className="
+                    absolute right-0 top-4
+                    text-xs px-3 py-1
+                    bg-secondary text-black
+                    rounded-full font-semibold
+                  ">
+                    Destacado
+                  </span>
+                )}
 
-                                {/* Línea vertical */}
-                                <div className="absolute left-4 sm:left-[6rem] top-16 bottom-0 w-px bg-white/20 mt-1"></div>
+                {/* 🔥 ICONO PERFECTAMENTE CENTRADO */}
+                <div className="
+                  absolute left-4 md:left-[6rem] top-10
+                  -translate-x-1/2
+                  flex items-center justify-center
+                  w-10 h-10
+                  rounded-full
+                  bg-darkBg border border-white/10
+                  shadow-lg shadow-secondary/20
+                ">
+                  <Icon className="w-5 h-5 text-secondary" />
+                </div>
 
-                                {/* Título */}
-                                <h3 className={`mb-2 text-xl md:text-2xl font-semibold
-                                    ${data.highlight ? "text-white" : "text-gray-200"}
-                                `}>
-                                    {data.title}
-                                </h3>
+                {/* 🔥 CONTENIDO */}
+                <div>
 
-                                {/* Fecha + subtítulo */}
-                                <div className="flex flex-col sm:flex-row items-start mb-2">
-                                        <time
-                                    className={`sm:absolute sm:left-[6rem] sm:-translate-x-full sm:-ml-1 inline-flex 
-                                        items-center justify-center text-xs font-medium tracking-wide
-                                        px-2 py-1 mb-3 sm:mb-0 rounded-full whitespace-nowrap
-                                        ${data.highlight 
-                                        ? "text-black bg-secondary" 
-                                        : "text-secondary bg-secondary/10"}
-                                    `}
-                                    >
-                                    {data.date}
-                                    </time>
-                                    <div className="text-sm md:text-base text-gray-300 font-medium">
-                                        {data.subtitle}
-                                    </div>
-                                </div>
+                  {/* TITLE */}
+                  <h3 className={`
+                    mb-2 text-xl md:text-2xl font-semibold
+                    ${data.highlight ? "text-white" : "text-gray-200"}
+                  `}>
+                    {data.title}
+                  </h3>
 
-                                {/* Descripción */}
-                                <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl">
-                                    {data.description}
-                                </p>
+                  {/* DATE + SUBTITLE */}
+                  <div className="flex flex-col md:flex-row md:items-center gap-2 mb-3">
 
-                                {/* Tecnologías */}
-                                {data.tecnologias && (
-                                    <p className="mt-3 text-xs md:text-sm text-secondary">
-                                        {data.tecnologias}
-                                    </p>
-                                )}
+                    <time className={`
+                      text-xs px-3 py-1 rounded-full w-fit
+                      ${data.highlight
+                        ? "bg-secondary text-black"
+                        : "bg-secondary/10 text-secondary"
+                      }
+                    `}>
+                      {data.date}
+                    </time>
 
-                            </motion.div>
-                        );
-                    })}
+                    <span className="text-sm md:text-base text-gray-400">
+                      {data.subtitle}
+                    </span>
+                  </div>
+
+                  {/* DESCRIPTION */}
+                  <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl">
+                    {data.description}
+                  </p>
+
+                  {/* TECH */}
+                  {data.tecnologias && (
+                    <p className="mt-3 text-xs md:text-sm text-secondary">
+                      {data.tecnologias}
+                    </p>
+                  )}
 
                 </div>
-            </div>
+
+              </motion.div>
+            );
+          })}
+
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default TimeLine;

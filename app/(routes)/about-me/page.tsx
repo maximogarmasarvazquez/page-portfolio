@@ -5,34 +5,59 @@ import React from 'react';
 import BotonCv from '@/components/boton-cv';
 
 const PageAboutMe = () => {
-    return (
-        <>
-            <TransitionPage />
+  return (
+    <>
+      <TransitionPage />
 
-            <ContainerPage>
+      <ContainerPage>
+        <div className="max-w-3xl mx-auto text-center md:text-left">
 
-                <div className="max-w-4xl mx-auto text-center md:text-left">
-                    
-                    <h1 className='text-3xl md:text-5xl font-bold leading-tight mt-10 mb-6'>
-                        Mi <span className='text-secondary'>trayectoria profesional</span>
-                    </h1>
+          {/* 🔥 EYEBROW */}
+          <p className="text-sm uppercase tracking-widest text-secondary/70 mb-3">
+            Sobre mí
+          </p>
 
-                    <p className="text-gray-300 text-base md:text-lg mb-12 leading-relaxed">
-                        Soy desarrollador full stack enfocado en construir aplicaciones modernas,
-                        escalables y bien diseñadas. A lo largo de mi experiencia trabajé con
-                        distintas tecnologías creando soluciones reales orientadas a usuarios.
-                    </p>
+          {/* 🔥 TITULO PRO */}
+          <h1 className="
+            text-4xl md:text-6xl 
+            font-bold leading-[1.1] 
+            mb-6 tracking-tight
+          ">
+            Mi{" "}
+            <span className="
+              text-transparent bg-clip-text 
+              bg-gradient-to-r from-secondary to-blue-400
+            ">
+              trayectoria profesional
+            </span>
+          </h1>
 
-                    <TimeLine />
+          {/* 🔥 DESCRIPCIÓN MEJORADA */}
+          <p className="
+            text-gray-400 
+            text-base md:text-lg 
+            mb-14 
+            leading-relaxed
+            max-w-2xl
+          ">
+            Soy desarrollador full stack enfocado en construir{" "}
+            <span className="text-white">aplicaciones modernas y escalables</span>, 
+            combinando diseño y tecnología para crear experiencias digitales
+            que generan impacto real en usuarios y negocios.
+          </p>
 
-                    <div className='flex justify-center mt-16'>
-                        <BotonCv />
-                    </div>
+          {/* TIMELINE */}
+          <TimeLine />
 
-                </div>
-            </ContainerPage>
-        </>
-    );
+          {/* CTA */}
+          <div className="flex justify-center mt-20">
+            <BotonCv />
+          </div>
+
+        </div>
+      </ContainerPage>
+    </>
+  );
 }
 
 export default PageAboutMe;

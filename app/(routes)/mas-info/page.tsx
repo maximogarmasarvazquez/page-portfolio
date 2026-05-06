@@ -12,82 +12,103 @@ const MasInfo = () => {
     <ContainerPage>
       <TransitionPage />
 
-      <div className="flex flex-col items-center text-center mt-20 px-6 space-y-10">
+      <div className="flex flex-col items-center text-center mt-20 px-6 space-y-12">
 
-        {/* Título */}
-        <h1 className="text-3xl md:text-5xl font-bold text-gray-800 dark:text-white">
-          ¡Contáctame!
+        {/* 🔥 TÍTULO */}
+        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+          Trabajemos <span className="text-secondary">juntos</span>
         </h1>
 
-        {/* Card de contacto */}
-        <div className="w-full max-w-md bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg p-8 space-y-6">
-          
-          {/* Email */}
-          <div className="flex items-center gap-3">
-            <Mail className="text-lg text-blue-500" />
-            <p className="text-gray-700 dark:text-gray-300">
-              <span className="font-semibold">Email:</span>{" "}
+        {/* 🔥 CARD */}
+        <div
+          className="
+            relative w-full max-w-md
+            p-8 space-y-6
+            rounded-2xl
+
+            bg-white/5 backdrop-blur-xl
+            border border-white/10
+
+            shadow-xl shadow-black/30
+          "
+        >
+          {/* glow */}
+          <div className="absolute inset-0 opacity-0 hover:opacity-100 transition duration-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-2xl" />
+
+          {/* EMAIL */}
+          <div className="flex items-center gap-3 text-left">
+            <Mail className="text-secondary" />
+            <p className="text-gray-300 text-sm">
+              <span className="font-medium text-white">Email:</span>{" "}
               <a
                 href="mailto:Maxivaz55@gmail.com"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
+                className="hover:text-secondary transition"
               >
                 Maxivaz55@gmail.com
               </a>
             </p>
           </div>
 
-          {/* LinkedIn */}
-          <div className="flex items-center gap-3">
-            <CircleUserRound className="text-lg text-blue-500" />
-            <p className="text-gray-700 dark:text-gray-300">
-              <span className="font-semibold">LinkedIn:</span>{" "}
+          {/* LINKEDIN */}
+          <div className="flex items-center gap-3 text-left">
+            <CircleUserRound className="text-secondary" />
+            <p className="text-gray-300 text-sm">
+              <span className="font-medium text-white">LinkedIn:</span>{" "}
               <a
                 href="https://www.linkedin.com/in/maximogarmasarvazquez"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 dark:text-blue-400 hover:underline"
+                className="hover:text-secondary transition"
               >
-                Maximo Garmasar Vazquez
+                maximo garmasar vazquez
               </a>
             </p>
           </div>
 
-          {/* WhatsApp */}
-          <div className="flex items-center gap-3">
-            <Phone className="text-lg text-blue-500" />
-            <p className="text-gray-700 dark:text-gray-300">
-              <span className="font-semibold">WhatsApp:</span>{" "}
+          {/* WHATSAPP */}
+          <div className="flex items-center gap-3 text-left">
+            <Phone className="text-secondary" />
+            <p className="text-gray-300 text-sm">
+              <span className="font-medium text-white">WhatsApp:</span>{" "}
               <a
                 href="https://wa.me/3546431626"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+                className="hover:text-secondary transition"
               >
                 +54 9 3546 431626
               </a>
             </p>
           </div>
-
         </div>
 
-        {/* Botón */}
+        {/* 🔥 CTA */}
         <a
           href="mailto:Maxivaz55@gmail.com"
-          className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
+          className="
+            px-6 py-3 rounded-xl
+            bg-secondary text-black font-medium
+
+            hover:bg-secondary/80
+            transition-all duration-300
+
+            shadow-lg shadow-secondary/30
+            hover:scale-105
+          "
         >
-          Enviarme un correo
+          Enviar mensaje
         </a>
 
-        {/* Tecnologías */}
+        {/* 🔥 STACK */}
         <div className="text-center mt-12">
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            Este sitio fue desarrollado con:
+          <p className="text-gray-400 mb-6 text-sm">
+            Este sitio fue desarrollado con
           </p>
 
-          <div className="flex justify-center gap-8 text-4xl md:text-5xl text-gray-800 dark:text-white">
-            <RiNextjsFill className="hover:text-gray-900 dark:hover:text-gray-400 transition-colors" />
-            <RiTailwindCssFill className="hover:text-blue-500 transition-colors" />
-            <FaReact className="hover:text-cyan-500 transition-colors" />
+          <div className="flex justify-center gap-10 text-4xl text-white/70">
+            <RiNextjsFill className="hover:text-white transition duration-300 hover:scale-110" />
+            <RiTailwindCssFill className="hover:text-secondary transition duration-300 hover:scale-110" />
+            <FaReact className="hover:text-cyan-400 transition duration-300 hover:scale-110" />
           </div>
         </div>
 

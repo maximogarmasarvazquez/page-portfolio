@@ -5,7 +5,6 @@ import PortfolioBox from "@/components/portfolio-box";
 import WorkExperience from "@/components/WorkExperience";
 import { dataPortfolio } from "@/data";
 
-// 👇 TIPADO CORRECTO
 type PortfolioItem =
   | {
       id: number;
@@ -30,7 +29,6 @@ type PortfolioItem =
     };
 
 const PortfolioPage = () => {
-  // ✅ ahora trae TODOS los trabajos
   const workProjects = dataPortfolio.filter(
     (p): p is Extract<PortfolioItem, { type: "work" }> =>
       p.type === "work"
@@ -41,39 +39,61 @@ const PortfolioPage = () => {
       p.type === "personal"
   );
 
+  // 🔥 primer proyecto como destacado
+  const featuredProject = workProjects[0];
+  const restWork = workProjects.slice(1);
+
   return (
     <ContainerPage>
       <TransitionPage />
 
-      <div className="flex flex-col justify-center h-full">
+      <div className="flex flex-col gap-20 py-10">
 
-        {/* EXPERIENCIA */}
-        <h1 className="text-2xl md:text-4xl text-center mb-8">
-          Experiencia{" "}
-          <span className="text-secondary font-bold">
-            Profesional
-          </span>
-        </h1>
-
-        {/* ✅ MAP de experiencias */}
-        <div className="flex flex-col gap-8 max-w-5xl mx-auto">
-          {workProjects.map((project) => (
-            <WorkExperience key={project.id} data={project} />
-          ))}
+        {/* 🔥 HERO / INTRO */}
+        <div className="text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+            Mis <span className="text-secondary">Proyectos</span>
+          </h1>
+          <p className="text-gray-400">
+            Una selección de trabajos donde combino diseño, desarrollo y experiencia de usuario.
+          </p>
         </div>
 
-        {/* PROYECTOS */}
-        <h1 className="text-2xl md:text-4xl text-center mt-16 mb-8">
-          Proyectos{" "}
-          <span className="text-secondary font-bold">
-            Académicos
-          </span>
-        </h1>
+        {/* ⭐ FEATURED PROJECT */}
+        {featuredProject && (
+          <div className="flex flex-col gap-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-center">
+              Proyecto destacado
+            </h2>
 
-        <div className="grid gap-8 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {personalProjects.map((data) => (
-            <PortfolioBox key={data.id} data={data} />
-          ))}
+            <WorkExperience data={featuredProject} />
+          </div>
+        )}
+
+        {/* 💼 EXPERIENCIA RESTANTE */}
+        {restWork.length > 0 && (
+          <div className="flex flex-col gap-8 max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-semibold text-center">
+              Experiencia profesional
+            </h2>
+
+            {restWork.map((project) => (
+              <WorkExperience key={project.id} data={project} />
+            ))}
+          </div>
+        )}
+
+        {/* 📦 PROYECTOS PERSONALES */}
+        <div className="flex flex-col gap-10">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center">
+            Proyectos académicos
+          </h2>
+
+          <div className="grid gap-8 mx-auto sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl">
+            {personalProjects.map((data) => (
+              <PortfolioBox key={data.id} data={data} />
+            ))}
+          </div>
         </div>
 
       </div>

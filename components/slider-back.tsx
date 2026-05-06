@@ -8,25 +8,50 @@ const SliderBack = () => {
   return (
     <Swiper
       breakpoints={{
-        320: { slidesPerView: 3, spaceBetween: 10, slidesPerGroup: 3 }, // En pantallas pequeñas, 1 slide por vez
-        768: { slidesPerView: 2, spaceBetween: 10, slidesPerGroup: 2 }, // En pantallas medianas, 2 slides por vez
-        1024: { slidesPerView: 3, spaceBetween: 10, slidesPerGroup: 3 }, // En pantallas grandes, 3 slides por vez
+        320: { slidesPerView: 3, spaceBetween: 12 },
+        768: { slidesPerView: 3, spaceBetween: 16 },
+        1024: { slidesPerView: 4, spaceBetween: 20 },
       }}
       freeMode={true}
-      pagination={{ clickable: true, el: ".custom-pagination" }} // Asignar el contenedor de la paginación
+      pagination={{ clickable: true, el: ".custom-pagination" }}
       modules={[Pagination]}
-      className="w-[280px] h-auto"
+      className="w-full max-w-sm"
     >
       {techsDataBack.map((item, index) => (
         <SwiperSlide key={index}>
-          <div className="  sm:flex-col gap-x-6 sm:gap-x-0 group flex flex-col items-center justify-center p-5 md:w-20 md:h-20 md:p-2 bg-[#1d3a54] rounded-md">
-            <div className="text-3xl text-secondary">{item.icon}</div>
-            <h3 className="text-xs text-white text-center">{item.title}</h3>
+          <div
+            className="
+              group flex flex-col items-center justify-center
+              p-5 rounded-xl
+
+              bg-white/5 backdrop-blur-xl
+              border border-white/10
+
+              hover:border-white/20
+              hover:bg-white/10
+
+              transition-all duration-300
+            "
+          >
+            {/* ICON */}
+            <div className="
+              text-3xl text-secondary
+              transition-transform duration-300
+              group-hover:scale-110
+            ">
+              {item.icon}
+            </div>
+
+            {/* TITLE */}
+            <h3 className="text-xs text-gray-300 mt-2 text-center">
+              {item.title}
+            </h3>
           </div>
         </SwiperSlide>
       ))}
-      {/* Contenedor de la paginación con clase personalizada */}
-      <div className="custom-pagination mt-6 flex justify-center items-center"></div> {/* Centra la paginación */}
+
+      {/* PAGINATION */}
+      <div className="custom-pagination mt-6 flex justify-center items-center" />
     </Swiper>
   );
 };
