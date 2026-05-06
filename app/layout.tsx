@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-
+import SideNavigation from "@/components/SideNavigation";
 import Navbar from "@/components/navbar";
 import Header from "@/components/header";
 
@@ -32,9 +32,10 @@ export default function RootLayout({
           text-white
         `}
       >
-        <Navbar />
-        <Header />
-        {children}
+      <Navbar />
+      <SideNavigation />
+      <Header />
+      {children}
       </body>
     </html>
   );
