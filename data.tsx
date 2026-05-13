@@ -149,7 +149,7 @@ export const dataPortfolio = [
     id: 0,
     title: "Maxivaz Web Studio",
     image: "/images/p8.png", // 👉 agregá la imagen
-    urlDemo: "https://maxivaz-web-studio.vercel.app/",
+    urlDemo: "https://maxivaz.com.ar/",
     urlGithub: "",
     description:
       "Landing page profesional orientada a la captación de clientes, combinando diseño moderno, alto rendimiento y experiencia de usuario optimizada.",
