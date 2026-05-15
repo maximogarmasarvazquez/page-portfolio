@@ -148,7 +148,7 @@ export const dataPortfolio = [
   {
     id: 0,
     title: "Maxivaz Web Studio",
-    image: "/images/p8.png", // 👉 agregá la imagen
+    image: "/images/p.png", // 👉 agregá la imagen
     urlDemo: "https://maxivaz.com.ar/",
     urlGithub: "",
     description:
