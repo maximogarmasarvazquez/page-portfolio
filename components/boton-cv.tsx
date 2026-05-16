@@ -4,7 +4,7 @@ function BotonCv() {
   return (
     <div>
       <a
-        href="/images/MaximoGarmasarCVDeveloper.pdf"
+        href="/images/MaximoGarmasarCV2026.pdf"
         download="MaximoGarmasarCV2026.pdf"
         target="_blank"
         rel="noopener noreferrer"
